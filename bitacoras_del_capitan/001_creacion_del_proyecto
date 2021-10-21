@@ -3,9 +3,15 @@
 -> en docker-compose.yml
 	-> cambiar todos los ejemplo_docker_1 por el nombre de la aplicacion
 
+-> crear carpeta ./docker/mysql
+
 -> docker-compose up -d
 
 -> docker-compose exec app composer create-project laravel/laravel:"8.*" --prefer-dist src
+
+-> add contenido ./src/.gitignore -> ./.gitignore
+
+-> eliminar ./src/.gitignore
 
 -> pasar todos los archivos de la aplicacion a src
 
