@@ -1,0 +1,18 @@
+-> copiar la carpeta
+
+-> en docker-compose.yml
+	-> cambiar todos los ejemplo_docker_1 por el nombre de la aplicacion
+
+-> docker-compose up -d
+
+-> docker-compose exec app composer create-project laravel/laravel:"8.*" --prefer-dist src
+
+-> pasar todos los archivos de la aplicacion a src
+
+-> .env
+	-> DB_HOST=db
+	-> modificar parametros de usuario y base de datos mysql
+
+-> crear archivo .env.docker
+
+
