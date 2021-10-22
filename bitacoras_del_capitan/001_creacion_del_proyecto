@@ -21,4 +21,12 @@
 
 -> crear archivo .env.docker
 
+-> crear proyecto github
 
+-> git remote set-url origin https://github.com/gabrieeelsp/plastitodo_back-v1.git
+
+-> git add .
+
+-> git commit -m "First commit"
+
+-> git push -u origin main
