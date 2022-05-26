@@ -7,21 +7,21 @@ services:
                 uid: 1000
             context: ./
             dockerfile: Dockerfile
-        image: plastitodo_back_v4
-        container_name: plastitodo_back_v4-app
+        image: laravel_8_base
+        container_name: laravel_8_base-app
         restart: unless-stopped
         working_dir: /var/www/
         volumes:
             - .:/var/www
         networks:
-            - plastitodo_back_v4
+            - laravel_8_base
 
     db:
         image: mysql:5.7
-        container_name: plastitodo_back_v4-db
+        container_name: laravel_8_base-db
         restart: unless-stopped
         environment:
-            MYSQL_DATABASE: plastitodo_back_v4_db
+            MYSQL_DATABASE: laravel_8_base_db
             MYSQL_ROOT_PASSWORD: 12345
             MYSQL_PASSWORD: 12345
             MYSQL_USER: docker_user
@@ -30,11 +30,11 @@ services:
         volumes:
             - ./docker/mysql/data_db:/var/lib/mysql
         networks:
-            - plastitodo_back_v4
+            - laravel_8_base
 
     nginx:
         image: nginx:alpine
-        container_name: plastitodo_back_v4-nginx
+        container_name: laravel_8_base-nginx
         restart: unless-stopped
         ports:
             - 8000:80
@@ -42,9 +42,9 @@ services:
             - .:/var/www
             - ./docker/nginx:/etc/nginx/conf.d/
         networks:
-            - plastitodo_back_v4
+            - laravel_8_base
 
 networks:
-    plastitodo_back_v4:
+    laravel_8_base:
         driver: bridge
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-20-04-es
