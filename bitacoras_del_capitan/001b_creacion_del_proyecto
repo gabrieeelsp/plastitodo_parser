@@ -3,6 +3,7 @@
 
 -> crear carpeta ./docker/mysql
 
+-> move .env.docker -> .env
 -> .env
 	-> modificar base de datos mysql
 
@@ -15,3 +16,10 @@
 -> git commit -m "First commit"
 
 -> git push -u origin main
+
+
+-> docker-compose up -d
+
+-> docker-compose exec app composer install
+
+-> docker-compose exec app php artisan [...]
